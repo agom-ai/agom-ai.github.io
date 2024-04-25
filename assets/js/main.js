@@ -15,11 +15,9 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/agom-logo.png";
-      logo.style.height = "64px";
-      logo.style.width = "64px";
+      logo.src = "assets/images/logo/logo-2.svg";
     } else {
-      logo.src = "assets/images/logo/agom-logo.png";
+      logo.src = "assets/images/logo/logo.svg";
     }
 
     // show or hide the back-top-top button

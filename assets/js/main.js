@@ -1,93 +1,105 @@
-(function () {
-  "use strict";
+// @ts-nocheck
+/*-----------------------------------------------------------------------------------
 
-  // ======= Sticky
-  window.onscroll = function () {
-    const ud_header = document.querySelector(".ud-header");
-    const sticky = ud_header.offsetTop;
-    const logo = document.querySelector(".navbar-brand img");
+    Template Name: Poco - Agency Bootstrap4 HTML5 Template
+    Template URI: zakirsoft.com
+    Description: Agency - Agency Bootstrap4 HTML5 Template
+    Author: Templatecookie
+    Author URI: zakirhossen.com
+    Version: 1.0
 
-    if (window.pageYOffset > sticky) {
-      ud_header.classList.add("sticky");
-    } else {
-      ud_header.classList.remove("sticky");
-    }
+-----------------------------------------------------------------------------------
 
-    // === logo change
-    if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/logo-2.svg";
-    } else {
-      logo.src = "assets/images/logo/logo.svg";
-    }
+    JS INDEX
+    ===================
 
-    // show or hide the back-top-top button
-    const backToTop = document.querySelector(".back-to-top");
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
-    }
-  };
+    01. Ui Variables	
+    02. Search Field
+    03. Hamburget Menu	
+    04. Magnify popup	
+    05. Slick Sliders
+        . Branding
+        . Branding-item
+        . Banner Branding	
+        . Testimonial
+        . Testimonial-2
+        . client Review
+        . client Image
+    06. Counter js
+        . Skill Progressbar 	
+   
 
-  //===== close navbar-collapse when a  clicked
-  let navbarToggler = document.querySelector(".navbar-toggler");
-  const navbarCollapse = document.querySelector(".navbar-collapse");
+-----------------------------------------------------------------------------------*/
 
-  document.querySelectorAll(".ud-menu-scroll").forEach((e) =>
-    e.addEventListener("click", () => {
-      navbarToggler.classList.remove("active");
-      navbarCollapse.classList.remove("show");
-    })
-  );
-  navbarToggler.addEventListener("click", function () {
-    navbarToggler.classList.toggle("active");
-    navbarCollapse.classList.toggle("show");
-  });
+(function ($) {
+  'use strict';
 
-  // ===== submenu
-  const submenuButton = document.querySelectorAll(".nav-item-has-children");
-  submenuButton.forEach((elem) => {
-    elem.querySelector("a").addEventListener("click", () => {
-      elem.querySelector(".ud-submenu").classList.toggle("show");
+  /*UI VARS*/
+  let logo = document.querySelector('.logo-04');
+
+  /*  Sticky Header*/
+  window.addEventListener('scroll', function () {
+    let header = document.querySelectorAll('header');
+
+    header.forEach((headItem) => {
+      headItem.classList.toggle('sticky', window.scrollY > 0);
     });
+    // it's only for homepage-3
+    // window.scrollY > 0
+    //   ? logo.setAttribute('src', 'assets/img/logo/logo.png')
+    //   : logo.setAttribute('src', 'assets/img/logo/logo04.png');
   });
 
-  // ===== wow js
-  new WOW().init();
+  /* back to top button */
+  var topBtn = $('#to-top');
+  topBtn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '600');
+  });
 
-  // ====== scroll top js
-  function scrollTo(element, to = 0, duration = 500) {
-    const start = element.scrollTop;
-    const change = to - start;
-    const increment = 20;
-    let currentTime = 0;
+  /* search box open */
+  $('.search-bar').on('click', function () {
+    $('.search-box').addClass('search-open');
+  });
+  $('.search-close').on('click', function () {
+    $('.search-box').removeClass('search-open');
+  });
 
-    const animateScroll = () => {
-      currentTime += increment;
+  /* humberger menu */
+  function toggleSidebar() {
+    $('header aside').toggleClass('active');
+    $('.hamburger-menu').toggleClass('open');
 
-      const val = Math.easeInOutQuad(currentTime, start, change, duration);
-
-      element.scrollTop = val;
-
-      if (currentTime < duration) {
-        setTimeout(animateScroll, increment);
-      }
-    };
-
-    animateScroll();
+    var sidebarOpen = $('header aside').hasClass('active');
+    if (sidebarOpen) {
+      disableScrolling();
+    } else {
+      enableScrolling();
+    }
   }
 
-  Math.easeInOutQuad = function (t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
+  $('.hamburger-menu').on('click', function () {
+    toggleSidebar();
+  });
 
-  document.querySelector(".back-to-top").onclick = () => {
-    scrollTo(document.documentElement);
-  };
-})();
+  $('.close-sidebar').on('click', function () {
+    toggleSidebar();
+  });
+
+  $('aside .overlay').on('click', function () {
+    toggleSidebar();
+  });
+
+  // aso js init
+
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+  
+  
+})(jQuery);
+
+function enableScrolling() {
+  throw new Error('Function not implemented.');
+}

@@ -533,7 +533,7 @@ p {
 /*  HOMPAGE 01
 /*----------------------------------------*/
 .header-area {
-  padding: 25px 0px;
+  padding: 5px 0px;
   position: relative;
 }
 
@@ -643,7 +643,7 @@ p {
 }
 
 .header-area .right-content .contact-number .primary__button {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .header-area .right-content .contact-number .bg__white {
@@ -655,181 +655,6 @@ p {
   font-size: 25px;
 }
 
-/*----------------------------------------*/
-/*  HOMPAGE 02
-/*----------------------------------------*/
-.header-area02 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  position: absolute;
-  width: 100%;
-  z-index: 999;
-}
-
-.header-area02 .main-menu {
-  padding-right: 135px;
-}
-
-.header-area02 .main-menu li {
-  padding-left: 50px;
-}
-
-.header-area02 .main-menu li a {
-  color: #aebef5;
-}
-
-.header-area02 .right-content .search-bar {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-left: 25px;
-}
-
-.header-area02 .hamburger-menu span {
-  background-color: #fff;
-}
-
-/*----------------------------------------*/
-/*  HOMPAGE 03
-/*----------------------------------------*/
-.header-area03 {
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 999;
-}
-
-.header-area03 .main-menu li a {
-  color: #d6d6d6;
-}
-
-.header-area03 .main-menu li a:hover {
-  color: #000560;
-}
-
-.header-area03 .main-menu li a.active {
-  color: white;
-}
-
-.header-area03 .main-menu li a.active::before {
-  background-color: white;
-}
-
-.header-area03 .main-menu li .sub-menu {
-  border-color: #1f99f4;
-}
-
-.header-area03 .main-menu li .sub-menu li a:hover {
-  color: #000560;
-}
-
-.header-area03 .right-content .search-bar {
-  border: 0;
-  background-color: rgba(255, 255, 255, 0.34);
-}
-
-.header-area03 .hamburger-menu span {
-  background-color: #fff;
-}
-
-.header-area03 aside .sidebar-menu {
-  background-color: #f1f9ff;
-}
-
-.header-area03 aside .sidebar-menu .main-menu li a {
-  color: #000560;
-}
-
-.header-area03 aside .sidebar-menu .main-menu li a.active {
-  color: #007bff;
-}
-
-/*----------------------------------------*/
-/*  HOMPAGE 04
-/*----------------------------------------*/
-.header-area04 {
-  position: absolute;
-  width: 100%;
-  right: 0;
-  z-index: 9999;
-}
-
-.header-area04 .main-menu {
-  padding-right: 105px;
-}
-
-.header-area04 .main-menu li a {
-  font-family: Vazirmatn, "Teko", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #B9C1DC;
-}
-
-.header-area04 .main-menu li a.active::before {
-  top: -21px;
-}
-
-.header-area04 .main-menu li .sub-menu li a {
-  font-size: 16px;
-}
-
-.header-area04 .contact-number {
-  margin-right: 20px;
-}
-
-.header-area04 .contact-number .primary__button {
-  border: 2px solid #3c5b6b;
-  font-family: Vazirmatn, "Teko", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 18px 35px;
-}
-
-.header-area04 .right-content .social-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header-area04 .right-content .social-icon a {
-  border: 2px solid #3c5b6b;
-  color: #fff;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 22px;
-  -webkit-transition: 0.3s all linear;
-  transition: 0.3s all linear;
-}
-
-.header-area04 .right-content .social-icon a:hover {
-  color: #fff;
-}
-
-.header-area04.sticky .hamburger-menu span {
-  background-color: #3c5b6b;
-}
-
-.header-area04 .hamburger-menu span {
-  background-color: #fff;
-}
-
-.header-area.header-area04.sticky {
-  background-color: #000;
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
-}
-
-.header-area.header-area04.sticky .logo a {
-  color: white;
-}
 
 .header-area {
   -webkit-transition: padding 0.3s ease-in-out;

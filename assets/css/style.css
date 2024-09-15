@@ -9723,6 +9723,10 @@ aside,
   z-index: 1;
 }
 
+#eitaa svg:hover{
+  fill:#fff5f7;
+}
+
 .blog-area .blog-quotes::after {
   position: absolute;
   content: '\f10e';
